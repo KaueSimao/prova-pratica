@@ -1,32 +1,18 @@
-function converterMoedas(Euro, Dólar, Libras, Valor) {
-    if (Euro === "metros" && numeroSaida === "quilometros") {
-      return quantidade / 1000;
-    } else if (numeroEntrada === "metros" && numeroSaida === "milimetros") {
-      return quantidade * 1000;
-    } else if (numeroEntrada === "quilometros" && numeroSaida === "metros") {
-      return quantidade * 1000;
-    } else if (numeroEntrada === "quilometros" && numeroSaida === "milimetros") {
-      return quantidade * 1000000;
-    } else if (numeroEntrada === "milimetros" && numeroSaida === "metros") {
-      return quantidade / 1000;
-    } else if (numeroEntrada === "milimetros" && numeroSaida === "quilometros") {
-      return quantidade / 1000000;
-    } else {
-      return quantidade;
+function converter(ct){        
+    const valor1 = parseFloat(document.getElementById("euro").value);
+    const valor2 = parseFloat(document.getElementById("dolar").value);
+    const valor3 = parseFloat(document.getElementById("libras").value);
+    const valor4 = parseFloat(document.getElementById("valor").value);
+    var resposta_final;
+
+    switch (ct) {
+
+        case "*":
+            resposta_final = euro * valor
+
+            break
+
     }
-  }
-  const botaoConversao = document.getElementById("conversao");
-  const quantidadeInput = document.getElementById("quantidade");
-  const numeroEntradaSelect = document.getElementById("numero-entrada");
-  const numeroSaidaSelect = document.getElementById("numero-saida");
-  const resultadoP = document.getElementById("resultado");
+    resposta.value = resposta_final;
 
-    botaoConversao.addEventListener("click", function () {
-    const quantidade = parseFloat(quantidadeInput.value);
-    const numeroEntrada = numeroEntradaSelect.value;
-    const numeroSaida = numeroSaidaSelect.value;
-
-    const numeroConvertido = converterUnidades(quantidade, numeroEntrada, numeroSaida);
-
-    resultadoP.innerHTML = `${quantidade} ${numeroEntrada} é equivalente a ${numeroConvertido} ${numeroSaida}`;
-  });
+}
